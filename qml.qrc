@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>images/Logo.png</file>
+        <file>images/close.png</file>
+        <file>images/minimize.png</file>
+        <file>images/accountInfo.png</file>
+        <file>images/email.png</file>
+        <file>images/uploadPrivateKey.png</file>
+        <file>images/cardInfo.png</file>
+    </qresource>
+</RCC>
