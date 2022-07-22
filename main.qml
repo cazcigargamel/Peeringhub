@@ -31,52 +31,13 @@ Window {
         }
     }
 
-    Rectangle {
-        id: topBar
-        anchors{
-            left:parent.left
-            top: parent.top
-            right: parent.right
-        }
-        height: 50
-        color: "#3DD598"
+    TopBar {
+        id: topbar
 
-        Image {
-            id: logoId
-            source: "qrc:/images/Logo.png"
-        }
-
-        Image {
-            id: closeIconId
-            source: "qrc:/images/close.png"
-            anchors {
-                verticalCenter: parent.verticalCenter
-                right: parent.right
-                rightMargin: 22
-            }
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    root.close();
-                }
-            }
-        }
-        Image {
-            id: minimizeIconId
-            source: "qrc:/images/minimize.png"
-            anchors {
-                verticalCenter: parent.verticalCenter
-                right: parent.right
-                rightMargin: 70
-            }
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    root.showMinimized();
-                }
-            }
+        onMinimizeClicked: root.showMinimized();
+        onCloseClicked: root.close();
+        onAccountClicked: {
+            console.log("account clicked");
         }
     }
 
