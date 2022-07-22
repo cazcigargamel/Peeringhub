@@ -14,6 +14,23 @@ Window {
            Qt.WindowMinimizeButtonHint |
            Qt.Window
 
+
+    Popup {
+        id: popup
+        x: 100
+        y:100
+        width: 200
+        height: 300
+        modal: true
+        focus: true
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+
+        Button{
+            text: "close"
+            onClicked: popup.close();
+        }
+    }
+
     Rectangle {
         id: topBar
         anchors{
@@ -28,6 +45,7 @@ Window {
             id: logoId
             source: "qrc:/images/Logo.png"
         }
+
         Image {
             id: closeIconId
             source: "qrc:/images/close.png"
@@ -51,6 +69,13 @@ Window {
                 verticalCenter: parent.verticalCenter
                 right: parent.right
                 rightMargin: 70
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    root.showMinimized();
+                }
             }
         }
     }
@@ -175,5 +200,22 @@ Window {
                 }
             }
         }
+    }
+
+    LoginForm {
+        id: loginForm
+        x: 557
+        y:110
+//        anchors {
+//            left: parent.left
+//            leftMargin: 557
+//            top:parent.top
+//            topMargin: 110
+//        }
+    }
+
+    Button{
+        text: "Open"
+        onClicked: loginForm.open()
     }
 }

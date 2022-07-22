@@ -8,5 +8,6 @@
         <file>images/email.png</file>
         <file>images/uploadPrivateKey.png</file>
         <file>images/cardInfo.png</file>
+        <file>LoginForm.qml</file>
     </qresource>
 </RCC>
