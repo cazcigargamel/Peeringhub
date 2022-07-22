@@ -10,5 +10,6 @@
         <file>images/cardInfo.png</file>
         <file>LoginForm.qml</file>
         <file>TopBar.qml</file>
+        <file>Acount/AccountCard.qml</file>
     </qresource>
 </RCC>
