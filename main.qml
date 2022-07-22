@@ -4,12 +4,15 @@ import QtQuick.Layouts 1.0
 import QtQuick.Controls 2.15
 
 Window {
+    id: root
     width: 1600
     height: 900
     visible: true
     title: qsTr("Hello World")
     color: "#F5F5F5"
-    flags: Qt.FramelessWindowHint
+    flags: Qt.FramelessWindowHint |
+           Qt.WindowMinimizeButtonHint |
+           Qt.Window
 
     Rectangle {
         id: topBar
@@ -32,6 +35,13 @@ Window {
                 verticalCenter: parent.verticalCenter
                 right: parent.right
                 rightMargin: 22
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    root.close();
+                }
             }
         }
         Image {
