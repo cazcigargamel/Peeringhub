@@ -67,8 +67,9 @@ Rectangle {
             text: qsTr("Organization Info")
             font.pointSize: 15
             color: "#FFFFFF"
-
         }
+
+
         MouseArea {
             anchors.fill: parent
             onClicked: {
