@@ -12,6 +12,8 @@
         <file>TopBar.qml</file>
         <file>Account/AccountCard.qml</file>
         <file>images/active.png</file>
+        <file>qmldir</file>
+        <file>Constants.qml</file>
         <file>Font/Mulish-Black.ttf</file>
         <file>Font/Mulish-BlackItalic.ttf</file>
         <file>Font/Mulish-Bold.ttf</file>

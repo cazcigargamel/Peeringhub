@@ -62,4 +62,21 @@ Window {
         text: "Open"
         onClicked: loginForm.open()
     }
+
+
+    Text {
+        id: namedeneme
+        text: qsTr("Welcome to ACME")
+        font.family: Constants.mulishNormal.name
+        font.pointSize: Constants.h2FontSize
+        //font.pointSize: 26
+        anchors.centerIn: parent
+    }
+    Text{
+        text: "Welcome to ACME"
+        font.pointSize: 26
+        anchors.horizontalCenter: namedeneme.horizontalCenter
+        anchors.top: namedeneme.bottom
+        anchors.topMargin: 40
+    }
 }
