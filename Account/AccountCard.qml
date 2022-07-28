@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import "../UIComponents/" as UI
 
 Rectangle {
     id: accountCard
@@ -37,10 +38,26 @@ Rectangle {
     Image {
         id: activeIcon
         source: "qrc:/images/active.png"
+
         anchors {
             verticalCenter: parent.verticalCenter
             left: statusLabel.right
             leftMargin: 10
+        }
+    }
+
+    UI.SecondaryButtonWithIcon {
+        id: deactiveButton
+        icon: "qrc:/images/closeForButton.png"
+        name: "Deactive"
+        onClick: {
+            console.log("Deactive clicked...")
+        }
+
+        anchors {
+            verticalCenter: parent.verticalCenter
+            right: parent.right
+            rightMargin: 50
         }
     }
 }

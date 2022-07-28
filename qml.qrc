@@ -33,5 +33,7 @@
         <file>Login/LoginForm.qml</file>
         <file>Login/LoginFormExtended.qml</file>
         <file>UIComponents/RadioButton.qml</file>
+        <file>UIComponents/SecondaryButtonWithIcon.qml</file>
+        <file>images/closeForButton.png</file>
     </qresource>
 </RCC>
