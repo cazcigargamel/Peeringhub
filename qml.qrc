@@ -31,5 +31,7 @@
         <file>Font/Mulish-SemiBold.ttf</file>
         <file>Font/Mulish-SemiBoldItalic.ttf</file>
         <file>Login/LoginForm.qml</file>
+        <file>Login/LoginFormExtended.qml</file>
+        <file>UIComponents/RadioButton.qml</file>
     </qresource>
 </RCC>

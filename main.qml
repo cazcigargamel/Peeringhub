@@ -52,7 +52,7 @@ Window {
         }
     }
 
-    L.LoginForm {
+    L.LoginFormExtended {
         id: loginForm
         x: 557
         y:110

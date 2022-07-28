@@ -6,7 +6,7 @@ import "../"
 
 Popup {
     id: root
-    width: 485
+    width: 510
     height: 526
 
     property string acmeUrl: acmeUrlTextInputId.text
