@@ -8,7 +8,7 @@ import "../UIComponents/" as UI
 
 Popup {
     id: root
-    width: 510
+    width: 485
     height: 691
 
     property string acmeUrl: acmeUrlTextInputId.text
@@ -30,7 +30,7 @@ Popup {
         text: qsTr("Welcome to ACME Client!")
         font {
             family: Constants.mulishNormal.name
-            pointSize: Constants.h2FontSize
+            pixelSize: Constants.h2
         }
 
         color: Constants.text1Color
@@ -65,7 +65,7 @@ Popup {
         }
         font {
             family: Constants.mulishNormal.name
-            pointSize: Constants.h5FontSize
+            pixelSize: Constants.h5
         }
 
         color: Constants.text1Color
@@ -104,7 +104,7 @@ Popup {
             }
             font {
                 family: Constants.mulishNormal.name
-                pointSize: Constants.h5FontSize
+                pixelSize: Constants.h5
             }
 
             color: Constants.text1Color
@@ -143,7 +143,7 @@ Popup {
                 text: qsTr("Country")
                 font {
                     family: Constants.mulishNormal.name
-                    pointSize: Constants.h5FontSize
+                    pixelSize: Constants.h5
                 }
 
                 color: Constants.text1Color
@@ -152,19 +152,19 @@ Popup {
                 text: qsTr("Optional")
                 font {
                     family: Constants.mulishNormal.name
-                    pointSize: Constants.h5FontSize
+                    pixelSize: Constants.h5
                 }
 
                 color: Constants.inputHintColor
             }
             Text {
                 text: qsTr("Locality")
-                font.pointSize: 15
+                font.pixelSize: 15
                 color: "#2F3C4E"
             }
             Text {
                 text: qsTr("Optional")
-                font.pointSize: 15
+                font.pixelSize: 15
                 color: "#C4C4C4"
             }
         }
@@ -188,7 +188,7 @@ Popup {
                 TextInput {
                     text: "US"
                     color: "#2F3C4E"
-                    font.pointSize: 15
+                    font.pixelSize: 15
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.left: parent.left
                     anchors.leftMargin: 20
@@ -206,7 +206,7 @@ Popup {
                 TextInput {
                     text: "e.g City"
                     color: "#C4C4C4"
-                    font.pointSize: 15
+                    font.pixelSize: 15
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.left: parent.left
                     anchors.leftMargin: 20
@@ -224,22 +224,22 @@ Popup {
             }
             Text {
                 text: qsTr("Organization")
-                font.pointSize: 15
+                font.pixelSize: 15
                 color: "#2F3C4E"
             }
             Text {
                 text: qsTr("Optional")
-                font.pointSize: 15
+                font.pixelSize: 15
                 color: "#C4C4C4"
             }
             Text {
                 text: qsTr("Unit")
-                font.pointSize: 15
+                font.pixelSize: 15
                 color: "#2F3C4E"
             }
             Text {
                 text: qsTr("Optional")
-                font.pointSize: 15
+                font.pixelSize: 15
                 color: "#C4C4C4"
             }
         }
@@ -263,7 +263,7 @@ Popup {
                 TextInput {
                     text: "Organization Name"
                     color: "#C4C4C4"
-                    font.pointSize: 15
+                    font.pixelSize: 15
                     anchors.centerIn: parent
                 }
             }
@@ -278,7 +278,7 @@ Popup {
 
                 TextInput {
                     text: "Organization Unit"
-                    font.pointSize: 15
+                    font.pixelSize: 15
                     color: "#C4C4C4"
                     anchors.centerIn: parent
                 }
@@ -296,7 +296,7 @@ Popup {
             }
             font {
                 family: Constants.mulishNormal.name
-                pointSize: Constants.h4
+                pixelSize: Constants.h4
             }
 
             contentItem: Text {
@@ -325,7 +325,7 @@ Popup {
 //                anchors.centerIn: parent
 //                text: "Log In"
 //                font.family: Constants.mulishNormal.name
-//                font.pointSize: Constants.h4
+//                font.pixelSize: Constants.h4
 //                color: "#FFFFFF"
 //            }
 //        }

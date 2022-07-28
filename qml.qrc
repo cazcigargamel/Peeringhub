@@ -35,5 +35,6 @@
         <file>UIComponents/RadioButton.qml</file>
         <file>UIComponents/SecondaryButtonWithIcon.qml</file>
         <file>images/closeForButton.png</file>
+        <file>Account/ActiveOrdersCard.qml</file>
     </qresource>
 </RCC>

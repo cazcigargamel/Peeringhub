@@ -20,14 +20,14 @@ Rectangle {
             left: parent.left
             leftMargin: 50
         }
-        font.pointSize: 26
+        font.pixelSize: 26
         color: "#2F3C4E"
     }
 
     Text {
         id: statusLabel
         text: qsTr("Status:")
-        font.pointSize: 18
+        font.pixelSize: 18
         color: "#2F3C4E"
         anchors{
             verticalCenter: parent.verticalCenter

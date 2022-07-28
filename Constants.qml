@@ -6,9 +6,10 @@ QtObject {
     readonly property FontLoader mulishNormal: FontLoader {
         source: "qrc:/Font/Mulish-Regular.ttf"
     }
-    readonly property int h2FontSize: 26
+    readonly property int h2: 26
+    readonly property int h3: 18
     readonly property int h4: 16
-    readonly property int h5FontSize: 15
+    readonly property int h5: 15
 
     readonly property color cardBackgroundColor: "#FFFFFF"
     readonly property color appBackground: "#EEF1FF"

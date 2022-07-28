@@ -37,8 +37,8 @@ Rectangle {
             leftMargin: 62
         }
         font {
-            family: Constants.mulishNormal.nameConstants.h4
-            pointSize: Constants.h4
+            family: Constants.mulishNormal.name
+            pixelSize: Constants.h4
         }
 
         color: Constants.primaryColor

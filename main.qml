@@ -52,6 +52,14 @@ Window {
         }
     }
 
+    ActiveOrdersCard{
+        anchors {
+            horizontalCenter: accountCard.horizontalCenter
+            top: accountCard.bottom
+            topMargin: 30
+        }
+    }
+
     L.LoginFormExtended {
         id: loginForm
         x: 557
@@ -72,7 +80,7 @@ Window {
 //        id: namedeneme
 //        text: qsTr("Welcome to ACME")
 //        font.family: Constants.mulishNormal.name
-//        font.pointSize: Constants.h2FontSize
+//        font.pixelSize: Constants.h2FontSize
 //        anchors.centerIn: parent
 //    }
 
