@@ -7,6 +7,8 @@ Popup {
     width: 485
     height: 714
 
+    property string acmeUrl: acmeUrlTextInputId.text
+
     modal: true
     focus: true
     closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
@@ -67,7 +69,8 @@ Popup {
             radius: 8
 
             TextInput {
-                text: "http://peeringhub.io"
+                id: acmeUrlTextInputId
+                text: "dfsd"
                 color: "#2F3C4E"
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.left: parent.left

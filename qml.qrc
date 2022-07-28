@@ -30,5 +30,6 @@
         <file>Font/Mulish-Regular.ttf</file>
         <file>Font/Mulish-SemiBold.ttf</file>
         <file>Font/Mulish-SemiBoldItalic.ttf</file>
+        <file>Login/LoginForm.qml</file>
     </qresource>
 </RCC>

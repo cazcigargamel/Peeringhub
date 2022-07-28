@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.0
 import QtQuick.Controls 2.15
 
 import "Account"
+import "Login" as L
 
 Window {
     id: root
@@ -51,7 +52,7 @@ Window {
         }
     }
 
-    LoginForm {
+    L.LoginForm {
         id: loginForm
         x: 557
         y:110
@@ -61,22 +62,18 @@ Window {
     Button{
         text: "Open"
         onClicked: loginForm.open()
+        onHoveredChanged: {
+            console.log(loginForm.acmeUrl)
+        }
     }
 
 
-    Text {
-        id: namedeneme
-        text: qsTr("Welcome to ACME")
-        font.family: Constants.mulishNormal.name
-        font.pointSize: Constants.h2FontSize
-        //font.pointSize: 26
-        anchors.centerIn: parent
-    }
-    Text{
-        text: "Welcome to ACME"
-        font.pointSize: 26
-        anchors.horizontalCenter: namedeneme.horizontalCenter
-        anchors.top: namedeneme.bottom
-        anchors.topMargin: 40
-    }
+//    Text {
+//        id: namedeneme
+//        text: qsTr("Welcome to ACME")
+//        font.family: Constants.mulishNormal.name
+//        font.pointSize: Constants.h2FontSize
+//        anchors.centerIn: parent
+//    }
+
 }
