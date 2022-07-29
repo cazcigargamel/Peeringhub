@@ -127,8 +127,8 @@ Rectangle {
         text: "Active"
         color: Constants.text1Color
         anchors {
-            left: certUrlId.right
-            leftMargin: 226
+            right: parent.right
+            rightMargin: 77
             top: parent.top
             topMargin: 87
         }
@@ -160,8 +160,9 @@ Rectangle {
         ListView {
             id: listViewId
             anchors.top: horizontalLineUpper.bottom
-            anchors.topMargin: 30
             anchors.left: parent.left
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
             model: listmodelId
             delegate: delegateId
         }
@@ -178,10 +179,10 @@ Rectangle {
             }
             ListElement {
                 orderId: "A0B1C073" ;
-                expiredOn: "2023-05-13" ;
+                expiredOn: "2023-05-14" ;
                 status: "Valid" ;
-                certCreatedOn: "2023-05-11" ;
-                certExpiredON: "2023-06-07" ;
+                certCreatedOn: "2023-05-12" ;
+                certExpiredON: "2023-06-08" ;
                 certUrl: "http://www.faxquote.com" ;
                 action: "Revoke"
             }
@@ -189,8 +190,8 @@ Rectangle {
                 orderId: "A0B1C060" ;
                 expiredOn: "2023-05-13" ;
                 status: "Valid" ;
-                certCreatedOn: "2023-05-11" ;
-                certExpiredON: "2023-06-07" ;
+                certCreatedOn: "2023-05-13" ;
+                certExpiredON: "2023-06-09" ;
                 certUrl: "http://www.faxquote.com" ;
                 action: "Revoke"
             }
@@ -201,9 +202,8 @@ Rectangle {
             Rectangle {
                 id: rectId
                 width: parent.width
-                height: 27
-                color: "red"
-
+                anchors.left: parent.left
+                height: 57
                 Text{
                     id: orderLabelId
                     anchors.verticalCenter: parent.verticalCenter
@@ -279,6 +279,28 @@ Rectangle {
                     anchors.left: certExpiredOnLabelId.right
                     anchors.leftMargin: 80
                     text: certUrl
+                    horizontalAlignment: Text.AlignLeft
+                    font{
+                        family: Constants.mulishNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
+                }
+                Image {
+                    id: revoleIconId
+                    source: "qrc:/images/revoke.png"
+                    anchors{
+                        verticalCenter: parent.verticalCenter
+                        right: rectId.right
+                        rightMargin: 108
+                    }
+                }
+                Text{
+                    id: revokeLabelId
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: parent.right
+                    anchors.rightMargin: 37
+                    text: action
                     horizontalAlignment: Text.AlignLeft
                     font{
                         family: Constants.mulishNormal.name

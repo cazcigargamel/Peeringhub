@@ -36,5 +36,6 @@
         <file>UIComponents/SecondaryButtonWithIcon.qml</file>
         <file>images/closeForButton.png</file>
         <file>Account/ActiveOrdersCard.qml</file>
+        <file>images/revoke.png</file>
     </qresource>
 </RCC>
