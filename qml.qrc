@@ -44,5 +44,7 @@
         <file>images/personXFill.png</file>
         <file>Account/DeactivedPopUp.qml</file>
         <file>images/popupClose.png</file>
+        <file>Account/ActivatedPopUp.qml</file>
+        <file>images/PersonCheckFill.png</file>
     </qresource>
 </RCC>
