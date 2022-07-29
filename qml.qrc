@@ -41,5 +41,8 @@
         <file>StackViewPage.qml</file>
         <file>Login/LoginPage.qml</file>
         <file>Account/AccountPage.qml</file>
+        <file>images/personXFill.png</file>
+        <file>Account/DeactivedPopUp.qml</file>
+        <file>images/popupClose.png</file>
     </qresource>
 </RCC>

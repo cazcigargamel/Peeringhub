@@ -51,7 +51,9 @@ Rectangle {
         icon: "qrc:/images/closeForButton.png"
         name: "Deactive"
         onClick: {
-            console.log("Deactive clicked...")
+            deactivedpopupId.x = 580 -215
+            deactivedpopupId.y = 267-100
+            deactivedpopupId.open()
         }
 
         anchors {
@@ -59,5 +61,9 @@ Rectangle {
             right: parent.right
             rightMargin: 50
         }
+    }
+
+    DeactivedPopUp {
+        id: deactivedpopupId
     }
 }
