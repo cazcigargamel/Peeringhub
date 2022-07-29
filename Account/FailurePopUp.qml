@@ -30,20 +30,20 @@ Popup {
 
     Image {
         id: personCloseId
-        source: "qrc:/images/PersonCheckFill.png"
+        source: "qrc:/images/exclamation.png"
         anchors {
             top: parent.top
-            topMargin: 107
+            topMargin: 100
             horizontalCenter: parent.horizontalCenter
         }
     }
 
     Text {
         id: label
-        text: qsTr("Activated")
+        text: qsTr("Failure")
         anchors {
             top: parent.top
-            topMargin: 183
+            topMargin: 200
             horizontalCenter: parent.horizontalCenter
         }
         font{
@@ -51,19 +51,19 @@ Popup {
             pixelSize: Constants.h2
 
         }
-        color: "#27AE60"
+        color: "#EB5757"
     }
 
     Text {
         id: longlabel
         height: 54
-        width: 240
+        width: 259
 
         wrapMode: Text.Wrap
-        text: qsTr("Your account has been succesfully activated")
+        text: qsTr("Account deactivation failed")
         anchors {
             top: parent.top
-            topMargin: 255
+            topMargin: 259
             horizontalCenter: parent.horizontalCenter
         }
         font{

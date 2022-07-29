@@ -53,7 +53,7 @@ Rectangle {
         onClick: {
             deactivedpopupId.x = 580 -215
             deactivedpopupId.y = 267-100
-            deactivedpopupId.open()
+            fail.open()
         }
 
         anchors {
@@ -65,5 +65,11 @@ Rectangle {
 
     DeactivedPopUp {
         id: deactivedpopupId
+    }
+    FailurePopUp{
+        id: fail
+    }
+    ActivatedPopUp{
+        id: active
     }
 }
