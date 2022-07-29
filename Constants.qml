@@ -15,6 +15,7 @@ QtObject {
     readonly property color appBackground: "#EEF1FF"
 
     readonly property color text1Color: "#2F3C4E"
+    readonly property color text2Color: "#8492A6"
     readonly property color inputHintColor: "#C4C4C4"
 
     readonly property color primaryColor: "#0062FF"
