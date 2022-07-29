@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.11
 import "../"
 
 Rectangle {
@@ -139,4 +139,27 @@ Rectangle {
         }
     }
 
+    Rectangle {
+        id:horizontalLineUpper
+        width: 1170 ; height: 1
+        color: Constants.outlineColor
+        border{
+            width: 1
+            color: Constants.outlineColor
+        }
+        anchors.top: parent.top
+        anchors.topMargin: 144
+    }
+
+    Flickable {
+        width: parent.width ; height: 560
+        contentHeight: listViewId.implicitHeight
+
+        ListView {
+            id: listViewId
+            anchors.fill: parent
+
+        }
+        ListMo
+    }
 }
