@@ -161,6 +161,7 @@ Rectangle {
             id: listViewId
             anchors.top: horizontalLineUpper.bottom
             anchors.topMargin: 30
+            anchors.left: parent.left
             model: listmodelId
             delegate: delegateId
         }
@@ -201,7 +202,7 @@ Rectangle {
                 id: rectId
                 width: parent.width
                 height: 27
-                //color: "red"
+                color: "red"
 
                 Text{
                     id: orderLabelId
@@ -218,9 +219,67 @@ Rectangle {
                 Text{
                     id: expiderOnLabelId
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.left: parent.left
-                    anchors.leftMargin: 177
+                    anchors.left: orderLabelId.right
+                    anchors.leftMargin: 50
                     text: expiredOn
+                    font{
+                        family: Constants.mulishNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
+                }
+                Rectangle{
+                    id: statusRectId
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.left: expiderOnLabelId.right
+                    anchors.leftMargin: 50
+                    width: 52 ; height: 21
+                    radius: 100
+                    color: status==="Valid" ? Constants.validColor : Constants.errorColor
+                Text{
+                    id: statusLabelId
+                    anchors.centerIn: parent
+                    text: status
+                    font{
+                        family: Constants.mulishNormal.name
+                        pixelSize: 13
+                    }
+                    color: Constants.text2Color
+                }
+                }
+                Text{
+                    id: certCreatedOnLabelId
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.left: statusRectId.right
+                    anchors.leftMargin: 45
+                    text: certCreatedOn
+                    horizontalAlignment: Text.AlignLeft
+                    font{
+                        family: Constants.mulishNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
+                }
+                Text{
+                    id: certExpiredOnLabelId
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.left: certCreatedOnLabelId.right
+                    anchors.leftMargin: 83
+                    text: certExpiredON
+                    horizontalAlignment: Text.AlignLeft
+                    font{
+                        family: Constants.mulishNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
+                }
+                Text{
+                    id: certUrlLabelId
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.left: certExpiredOnLabelId.right
+                    anchors.leftMargin: 80
+                    text: certUrl
+                    horizontalAlignment: Text.AlignLeft
                     font{
                         family: Constants.mulishNormal.name
                         pixelSize: Constants.h5
