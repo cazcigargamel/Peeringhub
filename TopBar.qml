@@ -1,9 +1,11 @@
 import QtQuick 2.0
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15
 
 Rectangle {
     id: root
 
-    property color primaryColor: "#3DD598"
+
 
     signal minimizeClicked()
     signal closeClicked()
@@ -19,117 +21,123 @@ Rectangle {
     }
 
     height: 50
-    color: root.primaryColor
+    color: Constants.primaryColor
 
     Image {
         id: logoId
-        source: "qrc:/images/Logo.png"
+        source: "qrc:/images/logoBlue.png"
     }
+    RowLayout {
+        id: buttonGroupId
+        anchors.left: logoId.right
+        anchors.leftMargin: 60
+        spacing: 50
 
-    Rectangle {
-        id: accountContainer
-        width: 184
-        height: 50
-        color: "transparent"
-        anchors {
-            left: logoId.right
-            verticalCenter: parent.verticalCenter
-        }
-        Text {
-            id: account
-            anchors.centerIn: parent
-            text: qsTr("Account")
-            font.pointSize: 15
-            color: "#FFFFFF"
+        Button{
+            id: accountId
+            text: "Account"
+            contentItem: Text {
+                    text: accountId.text
+                    font: accountId.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: accountId.down ? Constants.activeColor : Constants.inactiveColor
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
 
-        }
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                root.accountClicked();
-                console.log("inside");
+                background: Rectangle {
+                    implicitHeight: 50
+                    implicitWidth: 72
+                    color: Constants.primaryColor
+
+                }
+            font{
+                family: Constants.mulishNormal.name
+                pixelSize: 18
             }
-        }
-    }
 
-    Rectangle {
-        id: organizationContainer
-        width: 203
-        height: 50
-        color: "transparent"
-        anchors {
-            left: accountContainer.right
-            verticalCenter: parent.verticalCenter
-        }
-        Text {
-            id: organizationLabel
-            anchors.verticalCenter: parent.verticalCenter
-            text: qsTr("Organization Info")
-            font.pointSize: 15
-            color: "#FFFFFF"
         }
 
+        Button{
+            id: organizationInfoId
+            text: "Organization Info"
+            contentItem: Text {
+                    text: organizationInfoId.text
+                    font: organizationInfoId.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: organizationInfoId.down ? Constants.activeColor : Constants.inactiveColor
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
 
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                root.organizationInfoClicked();
-                console.log("inside");
+                background: Rectangle {
+                    implicitHeight: 50
+
+                    color: Constants.primaryColor
+
+                }
+            font{
+                family: Constants.mulishNormal.name
+                pixelSize: 18
             }
-        }
-    }
-
-    Rectangle {
-        id: ecPrivateKeyContainer
-        width: 175
-        height: 50
-        color: "transparent"
-        anchors {
-            left: organizationContainer.right
-            verticalCenter: parent.verticalCenter
-        }
-        Text {
-            id: ecPrivateKeyLabel
-            anchors.verticalCenter: parent.verticalCenter
-            text: qsTr("EC Private Key")
-            font.pointSize: 15
-            color: "#FFFFFF"
 
         }
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                root.organizationInfoClicked();
-                console.log("inside");
+
+        Button{
+            id: ecPrivateKeyId
+            text: "EC Private Key"
+            contentItem: Text {
+                    text: ecPrivateKeyId.text
+                    font: ecPrivateKeyId.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: ecPrivateKeyId.down ? Constants.activeColor : Constants.inactiveColor
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
+
+                background: Rectangle {
+                    implicitHeight: 50
+
+                    color: Constants.primaryColor
+
+                }
+            font{
+                family: Constants.mulishNormal.name
+                pixelSize: 18
             }
-        }
-    }
-
-    Rectangle {
-        id: spcTokenContainer
-        width: 175
-        height: 50
-        color: "transparent"
-        anchors {
-            left: ecPrivateKeyContainer.right
-            verticalCenter: parent.verticalCenter
-        }
-        Text {
-            id: spcTokenyLabel
-            anchors.verticalCenter: parent.verticalCenter
-            text: qsTr("SPC Token")
-            font.pointSize: 15
-            color: "#FFFFFF"
 
         }
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                root.organizationInfoClicked();
-                console.log("inside");
+        Button{
+            id: spcTokenId
+            text: "SPC Token"
+            contentItem: Text {
+                    text: spcTokenId.text
+                    font: spcTokenId.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: spcTokenId.down ? Constants.activeColor : Constants.inactiveColor
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
+
+                background: Rectangle {
+                    implicitHeight: 50
+
+                    color: Constants.primaryColor
+
+                }
+            font{
+                family: Constants.mulishNormal.name
+                pixelSize: 18
             }
+
         }
     }
+
+
     Image {
         id: closeIconId
         source: "qrc:/images/close.png"

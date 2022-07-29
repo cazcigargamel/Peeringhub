@@ -19,7 +19,8 @@ QtObject {
     readonly property color validColor: "#D9FFF2"
     readonly property color errorColor: "#FFEAEA"
     readonly property color inputHintColor: "#C4C4C4"
-
+    readonly property color inactiveColor:"#B8D3FF"
+    readonly property color activeColor:"#FFFFFF"
     readonly property color primaryColor: "#0062FF"
     readonly property color outlineColor: "#E6E6E6"
 }

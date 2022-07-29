@@ -37,5 +37,7 @@
         <file>images/closeForButton.png</file>
         <file>Account/ActiveOrdersCard.qml</file>
         <file>images/revoke.png</file>
+        <file>SPCToken/SPCTokenTopCard.qml</file>
+        <file>images/logoBlue.png</file>
     </qresource>
 </RCC>
