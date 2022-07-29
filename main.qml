@@ -17,6 +17,16 @@ Window {
            Qt.WindowMinimizeButtonHint |
            Qt.Window
 
+    Loader {
+        id: mainLoader
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: topbar.bottom
+            bottom: parent.bottom
+        }
+        source: "StackViewPage.qml"
+    }
 
     Popup {
         id: popup
@@ -43,22 +53,22 @@ Window {
             console.log("account clicked");
         }
     }
-    AccountCard {
-        id: accountCard
-        anchors {
-            horizontalCenter: parent.horizontalCenter
-            top: parent.top
-            topMargin: 100
-        }
-    }
+//    AccountCard {
+//        id: accountCard
+//        anchors {
+//            horizontalCenter: parent.horizontalCenter
+//            top: parent.top
+//            topMargin: 100
+//        }
+//    }
 
-    ActiveOrdersCard{
-        anchors {
-            horizontalCenter: accountCard.horizontalCenter
-            top: accountCard.bottom
-            topMargin: 30
-        }
-    }
+//    ActiveOrdersCard{
+//        anchors {
+//            horizontalCenter: accountCard.horizontalCenter
+//            top: accountCard.bottom
+//            topMargin: 30
+//        }
+//    }
 
     L.LoginFormExtended {
         id: loginForm
@@ -67,13 +77,13 @@ Window {
     }
 
 
-    Button{
-        text: "Open"
-        onClicked: loginForm.open()
-        onHoveredChanged: {
-            console.log(loginForm.acmeUrl)
-        }
-    }
+//    Button{
+//        text: "Open"
+//        onClicked: loginForm.open()
+//        onHoveredChanged: {
+//            console.log(loginForm.acmeUrl)
+//        }
+//    }
 
 
 //    Text {

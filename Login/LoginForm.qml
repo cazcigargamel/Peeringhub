@@ -3,17 +3,22 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 import "../"
-
-Popup {
+import "../UIComponents" as UI
+Item {
     id: root
     width: 485
     height: 526
 
     property string acmeUrl: acmeUrlTextInputId.text
 
-    modal: true
-    focus: true
-    closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+    Rectangle {
+        anchors.fill: parent
+        color: Constants.cardBackgroundColor
+    }
+
+//    modal: true
+//    focus: true
+//    closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
 
     Text {
         id: header
@@ -28,7 +33,7 @@ Popup {
         text: qsTr("Welcome to ACME Client!")
         font {
             family: Constants.mulishNormal.name
-            pointSize: Constants.h2FontSize
+            pixelSize: Constants.h2
         }
 
         color: Constants.text1Color
@@ -45,7 +50,7 @@ Popup {
         }
         font {
             family: Constants.mulishNormal.name
-            pointSize: Constants.h5FontSize
+            pixelSize: Constants.h5
         }
 
         color: Constants.text1Color
@@ -60,10 +65,11 @@ Popup {
             topMargin: 163
         }
         spacing: 10
-        RadioButton {
+
+        UI.RadioButton {
             text: "Service Provider"
         }
-        RadioButton {
+        UI.RadioButton {
             text: "VoIP End User"
         }
     }
@@ -78,7 +84,7 @@ Popup {
         }
         font {
             family: Constants.mulishNormal.name
-            pointSize: Constants.h5FontSize
+            pixelSize: Constants.h5
         }
 
         color: Constants.text1Color
@@ -101,9 +107,8 @@ Popup {
                 id: acmeUrlTextInputId
                 text: "dfsd"
                 color: Constants.text1Color
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.left: parent.left
-                anchors.leftMargin: 20
+                anchors.fill: parent
+                anchors.margins: 20
             }
         }
 
@@ -117,7 +122,7 @@ Popup {
             }
             font {
                 family: Constants.mulishNormal.name
-                pointSize: Constants.h5FontSize
+                pixelSize: Constants.h5
             }
 
             color: Constants.text1Color
@@ -139,9 +144,8 @@ Popup {
             TextInput {
                 text: "314H"
                 color: Constants.text1Color
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.left: parent.left
-                anchors.leftMargin: 20
+                anchors.fill: parent
+                anchors.margins: 20
             }
         }
 //        RowLayout {
@@ -150,7 +154,7 @@ Popup {
 //                text: qsTr("Country")
 //                font {
 //                    family: Constants.mulishNormal.name
-//                    pointSize: Constants.h5FontSize
+//                    pixelSize: Constants.h5FontSize
 //                }
 
 //                color: Constants.text1Color
@@ -159,19 +163,19 @@ Popup {
 //                text: qsTr("Optional")
 //                font {
 //                    family: Constants.mulishNormal.name
-//                    pointSize: Constants.h5FontSize
+//                    pixelSize: Constants.h5FontSize
 //                }
 
 //                color: Constants.inputHintColor
 //            }
 //            Text {
 //                text: qsTr("Locality")
-//                font.pointSize: 15
+//                font.pixelSize: 15
 //                color: "#2F3C4E"
 //            }
 //            Text {
 //                text: qsTr("Optional")
-//                font.pointSize: 15
+//                font.pixelSize: 15
 //                color: "#C4C4C4"
 //            }
 //        }
@@ -189,7 +193,7 @@ Popup {
 //                TextInput {
 //                    text: "US"
 //                    color: "#2F3C4E"
-//                    font.pointSize: 15
+//                    font.pixelSize: 15
 //                    anchors.verticalCenter: parent.verticalCenter
 //                    anchors.left: parent.left
 //                    anchors.leftMargin: 20
@@ -207,7 +211,7 @@ Popup {
 //                TextInput {
 //                    text: "e.g City"
 //                    color: "#C4C4C4"
-//                    font.pointSize: 15
+//                    font.pixelSize: 15
 //                    anchors.verticalCenter: parent.verticalCenter
 //                    anchors.left: parent.left
 //                    anchors.leftMargin: 20
@@ -219,22 +223,22 @@ Popup {
 //            spacing: 59
 //            Text {
 //                text: qsTr("Organization")
-//                font.pointSize: 15
+//                font.pixelSize: 15
 //                color: "#2F3C4E"
 //            }
 //            Text {
 //                text: qsTr("Optional")
-//                font.pointSize: 15
+//                font.pixelSize: 15
 //                color: "#C4C4C4"
 //            }
 //            Text {
 //                text: qsTr("Unit")
-//                font.pointSize: 15
+//                font.pixelSize: 15
 //                color: "#2F3C4E"
 //            }
 //            Text {
 //                text: qsTr("Optional")
-//                font.pointSize: 15
+//                font.pixelSize: 15
 //                color: "#C4C4C4"
 //            }
 //        }
@@ -252,7 +256,7 @@ Popup {
 //                TextInput {
 //                    text: "Organization Name"
 //                    color: "#C4C4C4"
-//                    font.pointSize: 15
+//                    font.pixelSize: 15
 //                    anchors.centerIn: parent
 //                }
 //            }
@@ -267,7 +271,7 @@ Popup {
 
 //                TextInput {
 //                    text: "Organization Unit"
-//                    font.pointSize: 15
+//                    font.pixelSize: 15
 //                    color: "#C4C4C4"
 //                    anchors.centerIn: parent
 //                }
@@ -285,7 +289,7 @@ Popup {
             }
             font {
                 family: Constants.mulishNormal.name
-                pointSize: Constants.h4
+                pixelSize: Constants.h4
             }
 
             contentItem: Text {
@@ -303,6 +307,8 @@ Popup {
                 radius: 8
                 color: Constants.primaryColor
             }
+
+            onClicked: stackview.push("qrc:/Account/AccountPage.qml")
         }
 //        Rectangle{
 //            width: 184
@@ -314,7 +320,7 @@ Popup {
 //                anchors.centerIn: parent
 //                text: "Log In"
 //                font.family: Constants.mulishNormal.name
-//                font.pointSize: Constants.h4
+//                font.pixelSize: Constants.h4
 //                color: "#FFFFFF"
 //            }
 //        }
