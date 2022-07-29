@@ -204,10 +204,23 @@ Rectangle {
                 //color: "red"
 
                 Text{
+                    id: orderLabelId
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.left: parent.left
                     anchors.leftMargin: 48
                     text: orderId
+                    font{
+                        family: Constants.mulishNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
+                }
+                Text{
+                    id: expiderOnLabelId
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.left: parent.left
+                    anchors.leftMargin: 177
+                    text: expiredOn
                     font{
                         family: Constants.mulishNormal.name
                         pixelSize: Constants.h5
