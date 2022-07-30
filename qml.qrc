@@ -48,5 +48,8 @@
         <file>images/PersonCheckFill.png</file>
         <file>images/exclamation.png</file>
         <file>Account/FailurePopUp.qml</file>
+        <file>SPCToken/SPCSelectOptionCard.qml</file>
+        <file>images/FilePlus.png</file>
+        <file>images/yourSPCToken.png</file>
     </qresource>
 </RCC>
