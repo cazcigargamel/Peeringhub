@@ -2,6 +2,8 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 
+import "../"
+
 Rectangle {
     id: root
 
@@ -55,6 +57,9 @@ Rectangle {
             font{
                 family: Constants.mulishNormal.name
                 pixelSize: 18
+            }
+            onClicked: {
+                root.accountClicked();
             }
 
         }
@@ -133,6 +138,7 @@ Rectangle {
                 family: Constants.mulishNormal.name
                 pixelSize: 18
             }
+            onClicked: root.sPCTokenClicked()
 
         }
     }

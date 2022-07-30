@@ -8,7 +8,6 @@
         <file>images/email.png</file>
         <file>images/uploadPrivateKey.png</file>
         <file>images/cardInfo.png</file>
-        <file>TopBar.qml</file>
         <file>Account/AccountCard.qml</file>
         <file>images/active.png</file>
         <file>qmldir</file>
@@ -51,5 +50,8 @@
         <file>SPCToken/SPCSelectOptionCard.qml</file>
         <file>images/FilePlus.png</file>
         <file>images/yourSPCToken.png</file>
+        <file>SPCToken/SPCPage.qml</file>
+        <file>HeaderBar/TopBar.qml</file>
+        <file>OrderCertificate/OrderSpCertificateCard.qml</file>
     </qresource>
 </RCC>

@@ -5,6 +5,7 @@ import QtQuick.Controls 2.15
 
 import "Account"
 import "Login" as L
+import "HeaderBar"
 
 Window {
     id: root
@@ -17,17 +18,26 @@ Window {
            Qt.WindowMinimizeButtonHint |
            Qt.Window
 
-    Loader {
-        id: mainLoader
+//    Loader {
+//        id: mainLoader
+//        anchors {
+//            left: parent.left
+//            right: parent.right
+//            top: topbar.bottom
+//            bottom: parent.bottom
+//        }
+//        source: "StackViewPage.qml"
+//    }
+    StackView {
+        id: stackview
         anchors {
             left: parent.left
             right: parent.right
             top: topbar.bottom
             bottom: parent.bottom
         }
-        source: "StackViewPage.qml"
+        initialItem: "StackViewPage.qml"
     }
-
     Popup {
         id: popup
         x: 100
@@ -51,6 +61,11 @@ Window {
         onCloseClicked: root.close();
         onAccountClicked: {
             console.log("account clicked");
+            stackview.replace("qrc:/Account/AccountPage.qml");
+        }
+        onSPCTokenClicked: {
+            console.log("spc token clicked");
+            stackview.replace("qrc:/SPCToken/SPCPage.qml");
         }
     }
 //    AccountCard {
