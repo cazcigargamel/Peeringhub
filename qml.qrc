@@ -53,5 +53,8 @@
         <file>SPCToken/SPCPage.qml</file>
         <file>HeaderBar/TopBar.qml</file>
         <file>OrderCertificate/OrderSpCertificateCard.qml</file>
+        <file>OrderCertificate/InfoCards.qml</file>
+        <file>images/KeyFill.png</file>
+        <file>images/KeyPlus.png</file>
     </qresource>
 </RCC>
