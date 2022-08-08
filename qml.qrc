@@ -67,5 +67,6 @@
         <file>images/accountKey.png</file>
         <file>images/cardUpload.png</file>
         <file>VoipEndUser/Login/EndUserLoginPage.qml</file>
+        <file>HeaderBar/EndUserTopBar.qml</file>
     </qresource>
 </RCC>
