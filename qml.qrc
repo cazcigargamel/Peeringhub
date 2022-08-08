@@ -57,5 +57,6 @@
         <file>images/KeyFill.png</file>
         <file>images/KeyPlus.png</file>
         <file>SPCToken/SPCTokenForm.qml</file>
+        <file>Account/InitialAccountPage.qml</file>
     </qresource>
 </RCC>
