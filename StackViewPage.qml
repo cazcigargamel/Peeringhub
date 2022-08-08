@@ -6,6 +6,6 @@ Item {
     StackView {
         id: stackview
         anchors.fill: parent
-        initialItem: "qrc:/Login/LoginPage.qml"
+        initialItem: "qrc:/VoipEndUser/Login/EndUserLoginPage.qml" //"qrc:/Login/LoginPage.qml"
     }
 }

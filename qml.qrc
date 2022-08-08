@@ -64,5 +64,8 @@
         <file>VoipEndUser/Login/EndUserLoginForm.qml</file>
         <file>images/accountInfoIcons.png</file>
         <file>images/accountUrl.png</file>
+        <file>images/accountKey.png</file>
+        <file>images/cardUpload.png</file>
+        <file>VoipEndUser/Login/EndUserLoginPage.qml</file>
     </qresource>
 </RCC>
