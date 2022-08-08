@@ -72,5 +72,7 @@
         <file>images/activeNumbers.png</file>
         <file>VoipEndUser/Dashboard/ActiveCertificateCard.qml</file>
         <file>images/activeCertificate.png</file>
+        <file>VoipEndUser/Dashboard/StatusCard.qml</file>
+        <file>images/status.png</file>
     </qresource>
 </RCC>
