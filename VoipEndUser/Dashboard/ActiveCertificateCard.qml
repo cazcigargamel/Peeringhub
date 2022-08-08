@@ -13,10 +13,11 @@ Rectangle {
             top: parent.top
             topMargin: 35
         }
-        source: "qrc:/images/activeNumbers.png"
+        source: "qrc:/images/activeCertificate.png"
     }
 
     Text{
+        text: "Active Certificate"
         anchors{
             left: parent.left
             leftMargin: 95
@@ -31,6 +32,7 @@ Rectangle {
     }
 
     Text{
+        text: "465"
         anchors{
             left: parent.left
             leftMargin: 50
