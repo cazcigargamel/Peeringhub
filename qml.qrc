@@ -68,5 +68,7 @@
         <file>images/cardUpload.png</file>
         <file>VoipEndUser/Login/EndUserLoginPage.qml</file>
         <file>HeaderBar/EndUserTopBar.qml</file>
+        <file>VoipEndUser/Dashboard/ActiveNumbersCard.qml</file>
+        <file>images/activeNumbers.png</file>
     </qresource>
 </RCC>
