@@ -113,6 +113,9 @@ Rectangle {
                 family: Constants.mulishNormal.name
                 pixelSize: 18
             }
+            onClicked: {
+                root.eCPrivateKeyClicked();
+            }
 
         }
         Button{

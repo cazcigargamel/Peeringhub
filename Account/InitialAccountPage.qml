@@ -23,7 +23,8 @@ Item {
                     pixelSize: Constants.h2
                 }
                 onClicked: {
-                    console.log("Certificates clicked")
+                    console.log("Certificates clicked");
+                    stackview.replace("qrc:/Account/AccountPage.qml");
                 }
             }
 
@@ -48,6 +49,10 @@ Item {
                 font {
                     family: Constants.mulishNormal.name
                     pixelSize: Constants.h2
+                }
+                onClicked: {
+                    console.log("Order Certificates clicked");
+
                 }
             }
         }

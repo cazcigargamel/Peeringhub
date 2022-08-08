@@ -67,6 +67,11 @@ Window {
             console.log("spc token clicked");
             stackview.replace("qrc:/SPCToken/SPCPage.qml");
         }
+
+        onECPrivateKeyClicked: {
+            console.log("EC Private clicked");
+            stackview.replace("qrc:/ECPrivateKey/ECPrivateKeyPage.qml");
+        }
     }
 //    AccountCard {
 //        id: accountCard

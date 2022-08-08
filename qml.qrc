@@ -58,5 +58,8 @@
         <file>images/KeyPlus.png</file>
         <file>SPCToken/SPCTokenForm.qml</file>
         <file>Account/InitialAccountPage.qml</file>
+        <file>ECPrivateKey/PrivateKeyTitleCard.qml</file>
+        <file>ECPrivateKey/YourPrivateCard.qml</file>
+        <file>ECPrivateKey/ECPrivateKeyPage.qml</file>
     </qresource>
 </RCC>
