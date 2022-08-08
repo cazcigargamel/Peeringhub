@@ -70,5 +70,7 @@
         <file>HeaderBar/EndUserTopBar.qml</file>
         <file>VoipEndUser/Dashboard/ActiveNumbersCard.qml</file>
         <file>images/activeNumbers.png</file>
+        <file>VoipEndUser/Dashboard/ActiveCertificateCard.qml</file>
+        <file>images/activeCertificate.png</file>
     </qresource>
 </RCC>
