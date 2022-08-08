@@ -61,5 +61,8 @@
         <file>ECPrivateKey/PrivateKeyTitleCard.qml</file>
         <file>ECPrivateKey/YourPrivateCard.qml</file>
         <file>ECPrivateKey/ECPrivateKeyPage.qml</file>
+        <file>VoipEndUser/Login/EndUserLoginForm.qml</file>
+        <file>images/accountInfoIcons.png</file>
+        <file>images/accountUrl.png</file>
     </qresource>
 </RCC>

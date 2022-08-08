@@ -52,7 +52,7 @@ Item {
                 }
                 onClicked: {
                     console.log("Order Certificates clicked");
-
+                    stackview.replace("qrc:/SPCToken/SPCPage.qml");
                 }
             }
         }
