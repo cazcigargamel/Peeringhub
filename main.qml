@@ -61,7 +61,8 @@ Window {
         onCloseClicked: root.close();
         onAccountClicked: {
             console.log("account clicked");
-            stackview.replace("qrc:/Account/AccountPage.qml");
+            //stackview.replace("qrc:/Account/AccountPage.qml");
+            stackview.replace("qrc:/SPCToken/SPCTokenForm.qml");
         }
         onSPCTokenClicked: {
             console.log("spc token clicked");

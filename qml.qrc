@@ -56,5 +56,6 @@
         <file>OrderCertificate/InfoCards.qml</file>
         <file>images/KeyFill.png</file>
         <file>images/KeyPlus.png</file>
+        <file>SPCToken/SPCTokenForm.qml</file>
     </qresource>
 </RCC>
