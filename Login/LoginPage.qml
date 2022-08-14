@@ -49,6 +49,11 @@ Item {
                 topMargin: 50
                 horizontalCenter: parent.horizontalCenter
             }
+            onServiceRadioClicked: {
+                console.log("service radio button clicked");
+                firstLogin.visible = true;
+                enduserLogin.visible = false;
+            }
         }
 
     }

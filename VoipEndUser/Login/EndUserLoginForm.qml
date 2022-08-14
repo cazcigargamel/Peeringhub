@@ -9,6 +9,8 @@ Rectangle {
     radius: 10
     color: Constants.cardBackgroundColor
 
+    signal serviceRadioClicked()
+
     ColumnLayout{
         spacing: 30
         anchors{
@@ -49,6 +51,7 @@ Rectangle {
 
                 UI.RadioButton{
                     name: "Service Provider"
+                    onClicked: serviceRadioClicked();
                 }
 
                 UI.RadioButton{
