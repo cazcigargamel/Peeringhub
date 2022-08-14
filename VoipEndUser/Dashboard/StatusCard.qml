@@ -10,16 +10,13 @@ Item {
 
     Rectangle{
         id: background
-        width: 512 ; height: 185
+        width: 270 ; height: 185
         radius: 8
-        color: "transparent"
-        border{
-            width: 1
-            color: Constants.outlineColor
-        }
+        color: Constants.cardBackgroundColor
+
         Image {
 
-            source: root.icon
+            source: "qrc:/images/status.png"
             anchors{
                 left: parent.left
                 leftMargin: 50
@@ -37,7 +34,7 @@ Item {
 
             anchors{
                 left: parent.left
-                leftMargin: 95
+                leftMargin: 90
                 top: parent.top
                 topMargin: 30
             }
@@ -50,7 +47,7 @@ Item {
                 left: parent.left
                 leftMargin: 50
                 top: parent.top
-                topMargin: 99
+                topMargin: 110
             }
         }
     }

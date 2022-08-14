@@ -76,5 +76,6 @@
         <file>images/status.png</file>
         <file>VoipEndUser/Dashboard/CardInfo.qml</file>
         <file>VoipEndUser/Dashboard/DashboardPage.qml</file>
+        <file>VoipEndUser/Numbers/NumbersPage.qml</file>
     </qresource>
 </RCC>

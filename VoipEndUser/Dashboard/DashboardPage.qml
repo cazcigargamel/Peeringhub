@@ -33,7 +33,7 @@ Item {
             anchors {
                 verticalCenter: activeCertificateId.verticalCenter
                 left: activeCertificateId.right
-                leftMargin: 50
+                leftMargin: 22
             }
         }
 
@@ -75,7 +75,7 @@ Item {
                 name: "Wade Warenn"
                 anchors {
                     top: parent.top
-                    topMargin: 230
+                    topMargin: 196
                     left: parent.left
                     leftMargin: 30
                 }
@@ -89,7 +89,7 @@ Item {
                     top: parent.top
                     topMargin: 230
                     left: parent.left
-                    leftMargin: 430
+                    leftMargin: 628
                 }
             }
 
@@ -99,7 +99,7 @@ Item {
                 name: "Title Placeholder"
                 anchors {
                     top: parent.top
-                    topMargin: 430
+                    topMargin: 362
                     left: parent.left
                     leftMargin: 30
                 }
@@ -111,9 +111,9 @@ Item {
                 name: "https://company.peerhub.io"
                 anchors {
                     top: parent.top
-                    topMargin: 630
+                    topMargin: 362
                     left: parent.left
-                    leftMargin: 430
+                    leftMargin: 628
                 }
             }
         }
