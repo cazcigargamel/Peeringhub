@@ -79,5 +79,9 @@ Window {
             console.log("EC Private clicked");
             mainLoader.source = "qrc:/VoipEndUser/Dashboard/DashboardPage.qml";
         }
+
+        onNumbersClicked: {
+            mainLoader.source = "qrc:/VoipEndUser/Numbers/NumbersPage.qml"
+        }
     }
 }
