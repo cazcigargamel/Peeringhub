@@ -8,6 +8,7 @@ Rectangle {
     id: root
 
     property bool showServiceHeader: false
+    property bool showEndUserHeader: false
 
     signal minimizeClicked()
     signal closeClicked()
@@ -15,6 +16,12 @@ Rectangle {
     signal organizationInfoClicked()
     signal eCPrivateKeyClicked()
     signal sPCTokenClicked()
+
+    signal dashboardClicked()
+    signal numbersClicked()
+    signal certificateClicked()
+    signal ordersClicked()
+    signal ordercertificateClicked()
 
     anchors{
         left:parent.left
@@ -146,7 +153,151 @@ Rectangle {
 
         }
     }
+//End user header bar buttons
+    RowLayout {
+        id: endUserButtonGroupId
+        visible: showEndUserHeader
+        anchors.left: logoId.right
+        anchors.leftMargin: 60
+        spacing: 50
 
+        Button{
+            id: dashboardId
+            text: "Dashboard"
+            contentItem: Text {
+                    text: dashboardId.text
+                    font: dashboardId.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: dashboardId.down ? Constants.activeColor : Constants.inactiveColor
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
+
+                background: Rectangle {
+                    implicitHeight: 50
+                    implicitWidth: 72
+                    color: Constants.primaryColor
+
+                }
+            font{
+                family: Constants.mulishNormal.name
+                pixelSize: 18
+            }
+            onClicked: {
+                root.dashboardClicked();
+            }
+
+        }
+
+        Button{
+            id: numbersId
+            text: "Numbers"
+            contentItem: Text {
+                    text: numbersId.text
+                    font: numbersId.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: numbersId.down ? Constants.activeColor : Constants.inactiveColor
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
+
+                background: Rectangle {
+                    implicitHeight: 50
+
+                    color: Constants.primaryColor
+
+                }
+            font{
+                family: Constants.mulishNormal.name
+                pixelSize: 18
+            }
+            onClicked: {
+                root.numbersClicked();
+            }
+        }
+
+        Button{
+            id: certificatesId
+            text: "Certificates"
+            contentItem: Text {
+                    text: certificatesId.text
+                    font: certificatesId.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: certificatesId.down ? Constants.activeColor : Constants.inactiveColor
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
+
+                background: Rectangle {
+                    implicitHeight: 50
+
+                    color: Constants.primaryColor
+
+                }
+            font{
+                family: Constants.mulishNormal.name
+                pixelSize: 18
+            }
+            onClicked: {
+                root.certificateClicked();
+            }
+
+        }
+        Button{
+            id: ordersId
+            text: "Orders"
+            contentItem: Text {
+                    text: ordersId.text
+                    font: ordersId.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: ordersId.down ? Constants.activeColor : Constants.inactiveColor
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
+
+                background: Rectangle {
+                    implicitHeight: 50
+
+                    color: Constants.primaryColor
+
+                }
+            font{
+                family: Constants.mulishNormal.name
+                pixelSize: 18
+            }
+            onClicked: root.ordersClicked();
+
+        }
+        Button{
+            id: ordercertificateId
+            text: "Order Certificate"
+            contentItem: Text {
+                    text: ordercertificateId.text
+                    font: ordercertificateId.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: ordercertificateId.down ? Constants.activeColor : Constants.inactiveColor
+                    horizontalAlignment: Text.AlignLeft
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
+
+                background: Rectangle {
+                    implicitHeight: 50
+
+                    color: Constants.primaryColor
+
+                }
+            font{
+                family: Constants.mulishNormal.name
+                pixelSize: 18
+            }
+            onClicked: root.ordercertificateClicked();
+        }
+    }
 
     Image {
         id: closeIconId

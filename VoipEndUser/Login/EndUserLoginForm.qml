@@ -10,6 +10,7 @@ Rectangle {
     color: Constants.cardBackgroundColor
 
     signal serviceRadioClicked()
+    signal loginClicked()
 
     ColumnLayout{
         spacing: 30
@@ -128,7 +129,11 @@ Rectangle {
                 color: Constants.primaryColor
             }
 
-            onClicked: stackview.push("qrc:/Account/AccountPage.qml")
+            onClicked: {
+                console.log("enduser login clicked");
+                loginClicked();
+            }
+
         }
 
 

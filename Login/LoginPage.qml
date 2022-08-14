@@ -54,6 +54,9 @@ Item {
                 firstLogin.visible = true;
                 enduserLogin.visible = false;
             }
+            onLoginClicked: {
+                topbar.showEndUserHeader = true;
+            }
         }
 
     }
