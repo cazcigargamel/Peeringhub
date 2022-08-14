@@ -6,16 +6,17 @@ import QtQuick.Controls.Styles 1.4
 import "../"
 import "../UIComponents/" as UI
 
-Popup {
+Item {
     id: root
     width: 485
     height: 691
 
     property string acmeUrl: acmeUrlTextInputId.text
 
-    modal: true
-    focus: true
-    closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+    Rectangle {
+        anchors.fill: parent
+        color: Constants.cardBackgroundColor
+    }
 
     Text {
         id: header
@@ -315,18 +316,5 @@ Popup {
                 color: Constants.primaryColor
             }
         }
-//        Rectangle{
-//            width: 184
-//            height: 50
-//            radius: 8
-//            color: Constants.primaryColor
 
-//            Text{
-//                anchors.centerIn: parent
-//                text: "Log In"
-//                font.family: Constants.mulishNormal.name
-//                font.pixelSize: Constants.h4
-//                color: "#FFFFFF"
-//            }
-//        }
     }

@@ -7,7 +7,7 @@ import "../"
 Rectangle {
     id: root
 
-
+    property bool showServiceHeader: false
 
     signal minimizeClicked()
     signal closeClicked()
@@ -31,6 +31,7 @@ Rectangle {
     }
     RowLayout {
         id: buttonGroupId
+        visible: showServiceHeader
         anchors.left: logoId.right
         anchors.leftMargin: 60
         spacing: 50

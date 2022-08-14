@@ -4,21 +4,19 @@ import QtQuick.Layouts 1.15
 
 import "../"
 import "../UIComponents" as UI
+
 Item {
     id: root
     width: 485
     height: 526
 
+    signal loginClicked()
     property string acmeUrl: acmeUrlTextInputId.text
 
     Rectangle {
         anchors.fill: parent
         color: Constants.cardBackgroundColor
     }
-
-//    modal: true
-//    focus: true
-//    closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
 
     Text {
         id: header
@@ -148,135 +146,7 @@ Item {
                 anchors.margins: 20
             }
         }
-//        RowLayout {
-//            spacing: 59
-//            Text {
-//                text: qsTr("Country")
-//                font {
-//                    family: Constants.mulishNormal.name
-//                    pixelSize: Constants.h5FontSize
-//                }
 
-//                color: Constants.text1Color
-//            }
-//            Text {
-//                text: qsTr("Optional")
-//                font {
-//                    family: Constants.mulishNormal.name
-//                    pixelSize: Constants.h5FontSize
-//                }
-
-//                color: Constants.inputHintColor
-//            }
-//            Text {
-//                text: qsTr("Locality")
-//                font.pixelSize: 15
-//                color: "#2F3C4E"
-//            }
-//            Text {
-//                text: qsTr("Optional")
-//                font.pixelSize: 15
-//                color: "#C4C4C4"
-//            }
-//        }
-
-//        RowLayout {
-//            spacing: 29
-//            Rectangle {
-//                color: "transparent"
-//                width: 178
-//                height: 51
-//                border.width: 1
-//                border.color: "#E6E6E6"
-//                radius: 8
-
-//                TextInput {
-//                    text: "US"
-//                    color: "#2F3C4E"
-//                    font.pixelSize: 15
-//                    anchors.verticalCenter: parent.verticalCenter
-//                    anchors.left: parent.left
-//                    anchors.leftMargin: 20
-//                }
-//            }
-
-//            Rectangle {
-//                color: "transparent"
-//                width: 178
-//                height: 51
-//                border.width: 1
-//                border.color: "#E6E6E6"
-//                radius: 8
-
-//                TextInput {
-//                    text: "e.g City"
-//                    color: "#C4C4C4"
-//                    font.pixelSize: 15
-//                    anchors.verticalCenter: parent.verticalCenter
-//                    anchors.left: parent.left
-//                    anchors.leftMargin: 20
-//                }
-//            }
-//        }
-
-//        RowLayout {
-//            spacing: 59
-//            Text {
-//                text: qsTr("Organization")
-//                font.pixelSize: 15
-//                color: "#2F3C4E"
-//            }
-//            Text {
-//                text: qsTr("Optional")
-//                font.pixelSize: 15
-//                color: "#C4C4C4"
-//            }
-//            Text {
-//                text: qsTr("Unit")
-//                font.pixelSize: 15
-//                color: "#2F3C4E"
-//            }
-//            Text {
-//                text: qsTr("Optional")
-//                font.pixelSize: 15
-//                color: "#C4C4C4"
-//            }
-//        }
-
-//        RowLayout {
-//            spacing: 29
-//            Rectangle {
-//                color: "transparent"
-//                width: 178
-//                height: 51
-//                border.width: 1
-//                border.color: "#E6E6E6"
-//                radius: 8
-
-//                TextInput {
-//                    text: "Organization Name"
-//                    color: "#C4C4C4"
-//                    font.pixelSize: 15
-//                    anchors.centerIn: parent
-//                }
-//            }
-
-//            Rectangle {
-//                color: "transparent"
-//                width: 178
-//                height: 51
-//                border.width: 1
-//                border.color: "#E6E6E6"
-//                radius: 8
-
-//                TextInput {
-//                    text: "Organization Unit"
-//                    font.pixelSize: 15
-//                    color: "#C4C4C4"
-//                    anchors.centerIn: parent
-//                }
-//            }
-//        }
 
         Button {
             id: loginButton
@@ -308,21 +178,12 @@ Item {
                 color: Constants.primaryColor
             }
 
-            onClicked: stackview.push("qrc:/Account/AccountPage.qml")
+            onClicked: { //stackview.push("qrc:/Account/AccountPage.qml");
+                settings.firstTime = false;
+                console.log("first time false cekildi")
+                loginClicked();
+            }
         }
-//        Rectangle{
-//            width: 184
-//            height: 50
-//            radius: 8
-//            color: Constants.primaryColor
 
-//            Text{
-//                anchors.centerIn: parent
-//                text: "Log In"
-//                font.family: Constants.mulishNormal.name
-//                font.pixelSize: Constants.h4
-//                color: "#FFFFFF"
-//            }
-//        }
     }
 
