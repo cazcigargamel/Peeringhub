@@ -31,6 +31,7 @@ Item {
             onLoginClicked: {
                 clickedServiceProvider();
                 topbar.showServiceHeader = true;
+                mainLoader.source = "qrc:/Account/AccountPage.qml"
 
             }
             onVoipenduserClicked: {
