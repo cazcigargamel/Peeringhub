@@ -9,6 +9,7 @@ Item {
         color: Constants.appBackground
         radius: 8
         ActiveNumbersCard {
+            id: activateNumbersId
             anchors {
                 top: parent.top
                 topMargin: 110
@@ -18,6 +19,7 @@ Item {
         }
 
         ActiveCertificateCard{
+            id: activeCertificateId
             anchors {
                 top: parent.top
                 topMargin: 110
@@ -27,11 +29,11 @@ Item {
         }
 
         StatusCard{
+            icon: "qrc:/images/active.png"
             anchors {
-                top: parent.top
-                topMargin: 110
-                left: parent.left
-                leftMargin: 1115
+                verticalCenter: activeCertificateId.verticalCenter
+                left: activeCertificateId.right
+                leftMargin: 50
             }
         }
 
@@ -39,7 +41,11 @@ Item {
             width: 1170 ; height: 508
             radius: 10
             color: Constants.cardBackgroundColor
-
+            anchors {
+                top: activateNumbersId.bottom
+                topMargin: 40
+                left: activateNumbersId.left
+            }
             CardInfo{
                 icon: ""
                 title: "Company Name"
@@ -69,7 +75,7 @@ Item {
                 name: "Wade Warenn"
                 anchors {
                     top: parent.top
-                    topMargin: 30
+                    topMargin: 230
                     left: parent.left
                     leftMargin: 30
                 }
@@ -81,9 +87,9 @@ Item {
                 name: "(480) 555-0133"
                 anchors {
                     top: parent.top
-                    topMargin: 30
+                    topMargin: 230
                     left: parent.left
-                    leftMargin: 30
+                    leftMargin: 430
                 }
             }
 
@@ -93,7 +99,7 @@ Item {
                 name: "Title Placeholder"
                 anchors {
                     top: parent.top
-                    topMargin: 30
+                    topMargin: 430
                     left: parent.left
                     leftMargin: 30
                 }
@@ -105,9 +111,9 @@ Item {
                 name: "https://company.peerhub.io"
                 anchors {
                     top: parent.top
-                    topMargin: 30
+                    topMargin: 630
                     left: parent.left
-                    leftMargin: 30
+                    leftMargin: 430
                 }
             }
         }

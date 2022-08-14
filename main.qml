@@ -10,8 +10,8 @@ import Qt.labs.settings 1.1
 
 Window {
     id: root
-    width: 900//1600
-    height: 700//900
+    width: 1600
+    height: 900
     visible: true
     title: qsTr("Hello World")
     color: "#F5F5F5"
@@ -58,16 +58,26 @@ Window {
         onCloseClicked: root.close();
         onAccountClicked: {
             console.log("account clicked");
-            stackview.replace("qrc:/Account/InitialAccountPage.qml");
+            mainLoader.source = "qrc:/Account/InitialAccountPage.qml";
         }
+        onOrganizationInfoClicked: {
+            console.log("spc token clicked");
+            mainLoader.source = "qrc:/SPCToken/SPCPage.qml";
+        }
+
         onSPCTokenClicked: {
             console.log("spc token clicked");
-            stackview.replace("qrc:/SPCToken/SPCPage.qml");
+            mainLoader.source = "qrc:/SPCToken/SPCPage.qml";
         }
 
         onECPrivateKeyClicked: {
             console.log("EC Private clicked");
-            stackview.replace("qrc:/ECPrivateKey/ECPrivateKeyPage.qml");
+            mainLoader.source = "qrc:/ECPrivateKey/ECPrivateKeyPage.qml";
+        }
+
+        onDashboardClicked: {
+            console.log("EC Private clicked");
+            mainLoader.source = "qrc:/VoipEndUser/Dashboard/DashboardPage.qml";
         }
     }
 }

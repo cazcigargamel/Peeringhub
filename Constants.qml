@@ -6,6 +6,7 @@ QtObject {
     readonly property FontLoader mulishNormal: FontLoader {
         source: "qrc:/Font/Mulish-Regular.ttf"
     }
+    readonly property int h1: 45
     readonly property int h2: 26
     readonly property int h3: 18
     readonly property int h4: 16
