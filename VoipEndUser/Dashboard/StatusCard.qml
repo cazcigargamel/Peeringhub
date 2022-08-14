@@ -4,7 +4,8 @@ import "../../"
 Item {
     id: root
     property string icon: ""
-    property string name: ""
+    property bool status: true
+
     width: background.width ; height: background.height
 
     Rectangle{
@@ -21,34 +22,35 @@ Item {
             source: root.icon
             anchors{
                 left: parent.left
-                leftMargin: 36
+                leftMargin: 50
                 top: parent.top
-                topMargin: 34
+                topMargin: 35
             }
         }
         Text{
             text: "Status"
             font{
                 family: Constants.mulishNormal.name
-                pixelSize: Constants.h5
+                pixelSize: Constants.h2
             }
+            color: Constants.text2Color
+
             anchors{
                 left: parent.left
-                leftMargin: 70
+                leftMargin: 95
                 top: parent.top
-                topMargin: 22
+                topMargin: 30
             }
 
-            color: Constants.text1Color
         }
         Image {
 
-            source: root.icon
+            source: root.status ? "qrc:/images/active.png" : ""
             anchors{
                 left: parent.left
-                leftMargin: 36
+                leftMargin: 50
                 top: parent.top
-                topMargin: 34
+                topMargin: 99
             }
         }
     }

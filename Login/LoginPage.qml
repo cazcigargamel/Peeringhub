@@ -57,6 +57,7 @@ Item {
             }
             onLoginClicked: {
                 topbar.showEndUserHeader = true;
+                mainLoader.source = "qrc:/VoipEndUser/Dashboard/DashboardPage.qml"
             }
         }
 
