@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.12
 import "../"
-
+import "../VoipEndUser/Login/"
 Item {
 
     signal clickedServiceProvider()
@@ -32,6 +32,22 @@ Item {
                 clickedServiceProvider();
                 topbar.showServiceHeader = true;
 
+            }
+            onVoipenduserClicked: {
+                console.log("voip radio button clicked");
+                firstLogin.visible = false;
+                enduserLogin.visible = true;
+
+            }
+        }
+
+        EndUserLoginForm {
+            id: enduserLogin
+            visible: false
+            anchors {
+                top: parent.top
+                topMargin: 50
+                horizontalCenter: parent.horizontalCenter
             }
         }
 

@@ -11,6 +11,8 @@ Item {
     height: 526
 
     signal loginClicked()
+    signal voipenduserClicked()
+
     property string acmeUrl: acmeUrlTextInputId.text
 
     Rectangle {
@@ -69,6 +71,10 @@ Item {
         }
         UI.RadioButton {
             text: "VoIP End User"
+            onClicked: {
+                console.log("show end user login page")
+                voipenduserClicked();
+            }
         }
     }
 
