@@ -79,5 +79,8 @@
         <file>VoipEndUser/Numbers/NumbersPage.qml</file>
         <file>VoipEndUser/Certificate/CertificatePage.qml</file>
         <file>VoipEndUser/Orders/OrdersPage.qml</file>
+        <file>images/canceled.png</file>
+        <file>images/expired.png</file>
+        <file>images/revoked.png</file>
     </qresource>
 </RCC>
