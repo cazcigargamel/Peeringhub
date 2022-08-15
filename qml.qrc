@@ -82,5 +82,12 @@
         <file>images/canceled.png</file>
         <file>images/expired.png</file>
         <file>images/revoked.png</file>
+        <file>VoipEndUser/OrderCertificate/OrderCertificatePage.qml</file>
+        <file>VoipEndUser/OrderCertificate/FirstPage.qml</file>
+        <file>images/ok.png</file>
+        <file>UIComponents/PrimaryButtonWithIcon.qml</file>
+        <file>images/import.png</file>
+        <file>images/copy.png</file>
+        <file>images/specifyRange.png</file>
     </qresource>
 </RCC>

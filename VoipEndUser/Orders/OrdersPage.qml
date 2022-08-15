@@ -94,13 +94,13 @@ Item {
             delegate: delegateId
             ScrollBar.vertical: ScrollBar {
                     active: true
-                    contentItem: Rectangle {
-                            id:contentItem_rect2
-                            radius: implicitHeight/2
-                            color: "#0062FF"
-                            width: 2 // This will be overridden by the width of the scrollbar
-                            height: 130 // This will be overridden based on the size of the scrollbar
-                        }
+//                    contentItem: Rectangle {
+//                            id:contentItem_rect2
+//                            radius: 4
+//                            color: "#0062FF"
+//                            width: 2 // This will be overridden by the width of the scrollbar
+//                            height: 130 // This will be overridden based on the size of the scrollbar
+//                        }
                     }
         }
 
