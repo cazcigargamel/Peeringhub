@@ -86,5 +86,8 @@ Window {
         onCertificateClicked: {
             mainLoader.source = "qrc:/VoipEndUser/Certificate/CertificatePage.qml"
         }
+        onOrdersClicked: {
+            mainLoader.source = "qrc:/VoipEndUser/Orders/OrdersPage.qml"
+        }
     }
 }
