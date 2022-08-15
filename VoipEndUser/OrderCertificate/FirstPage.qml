@@ -11,7 +11,7 @@ Item {
             top: parent.top
             topMargin: 50
             left: parent.left
-            leftMargin: 154
+            leftMargin: 215
         }
 
         color: Constants.cardBackgroundColor
@@ -24,7 +24,7 @@ Item {
                 left:parent.left
                 leftMargin: 50
                 top: parent.top
-                topMargin: 50
+                topMargin: 47
             }
             font {
                 family: Constants.mulishNormal.name
@@ -39,7 +39,7 @@ Item {
                 left:parent.left
                 leftMargin: 1040
                 top: parent.top
-                topMargin: 50
+                topMargin: 47
             }
             font {
                 family: Constants.mulishNormal.name
@@ -52,9 +52,9 @@ Item {
     Rectangle{
         anchors{
             top: parent.top
-            topMargin: 50
+            topMargin: 263
             left: parent.left
-            leftMargin: 154
+            leftMargin: 215
         }
 
         color: Constants.cardBackgroundColor
@@ -162,6 +162,7 @@ Item {
             color: Constants.text1Color
         }
         Rectangle{
+            width: 170 ; height: 40
             anchors{
                 left:parent.left
                 leftMargin: 50
@@ -191,8 +192,141 @@ Item {
                 width: 2
                 color: Constants.outlineColor
             }
+            color: "#FFFFFF"
+            Text {
+                text: qsTr("ID")
+                anchors{
+                    left:parent.left
+                    leftMargin: 104
+                    top: parent.top
+                    topMargin: 10
+                }
+                font {
+                    family: Constants.mulishNormal.name
+                    pixelSize: Constants.h3
+                }
+
+                color: Constants.text1Color
+            }
+            Text {
+                text: qsTr("Phone")
+                anchors{
+                    left:parent.left
+                    leftMargin: 230
+                    top: parent.top
+                    topMargin: 10
+                }
+                font {
+                    family: Constants.mulishNormal.name
+                    pixelSize: Constants.h3
+                }
+
+                color: Constants.text1Color
+            }
+            Rectangle{
+                id: upperLine
+                z: 100
+                width: 430 ; height: 2
+                anchors{
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 47
+                }
+                color: Constants.outlineColor
+            }
+            Rectangle{
+                id: bottomLine
+                z:100
+                width: 430 ; height: 2
+                anchors{
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 297
+                }
+                color: Constants.outlineColor
+            }
+            ListView{
+                id: listViewId
+                anchors.top: upperLine.bottom
+                anchors.left: parent.left
+                anchors.bottom: bottomLine.top
+                anchors.right: parent.right
+                model: listmodelId
+                delegate: delegateId
+            }
+            ListModel{
+                id: listmodelId
+                ListElement {
+                    idd: "1" ;
+                    phone: "(480) 555-0103" ;
+                    check: "true";
+                }
+                ListElement {
+                    idd: "2" ;
+                    phone: "(603) 555-0123" ;
+                    check: "false" ;
+                }
+                ListElement {
+                    idd: "3" ;
+                    phone: "(239) 555-0108" ;
+                    check: "false" ;
+                }
+                ListElement {
+                    idd: "4" ;
+                    phone: "(208) 555-0112" ;
+                    check: "false" ;
+                }
+                ListElement {
+                    idd: "5" ;
+                    phone: "(219) 555-0114" ;
+                    check: "true";
+                }
+            }
+            Component{
+                id: delegateId
+                Rectangle {
+                    id: rectId
+                    width: parent.width - 2
+                    anchors.left: parent.left
+                    anchors.leftMargin: 1
+                    height: 57
+                    CheckBox{
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.left: parent.left
+                        anchors.leftMargin: 10
+                        checked: {
+                            if(check === "true") return true;
+                            else return false;
+                        }
+
+                    }
+
+                    Text{
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.left: parent.left
+                        anchors.leftMargin: 104
+                        text: idd
+                        font{
+                            family: Constants.mulishNormal.name
+                            pixelSize: Constants.h5
+                        }
+                        color: Constants.text2Color
+                    }
+                    Text{
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.left: parent.left
+                        anchors.leftMargin: 230
+                        text: phone
+                        font{
+                            family: Constants.mulishNormal.name
+                            pixelSize: Constants.h5
+                        }
+                        color: Constants.text1Color
+                    }
+            }
         }
 
+    }
         Rectangle{
             width: 581 ; height: 350
             radius: 5
@@ -207,5 +341,6 @@ Item {
                 color: Constants.outlineColor
             }
         }
-    }
+
+}
 }
