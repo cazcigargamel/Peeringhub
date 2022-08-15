@@ -78,5 +78,6 @@
         <file>VoipEndUser/Dashboard/DashboardPage.qml</file>
         <file>VoipEndUser/Numbers/NumbersPage.qml</file>
         <file>VoipEndUser/Certificate/CertificatePage.qml</file>
+        <file>VoipEndUser/Orders/OrdersPage.qml</file>
     </qresource>
 </RCC>
