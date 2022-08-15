@@ -246,7 +246,7 @@ Item {
             id: listViewId
             anchors.top: upperLine.bottom
             anchors.left: parent.left
-            anchors.bottom: upperLine.bottom
+            anchors.bottom: bottomLine.bottom
             anchors.right: parent.right
             model: listmodelId
             delegate: delegateId
@@ -262,9 +262,51 @@ Item {
             }
             ListElement {
                 number: "(205) 555-0100" ;
+                createdOn: "2022-04-25" ;
+                voipUser: "User placeholder2" ;
+                organization: "J-Texon" ;
+                assignedOn: "2022-04-26" ;
+            }
+            ListElement {
+                number: "(505) 555-0125" ;
                 createdOn: "2022-04-24" ;
                 voipUser: "User placeholder" ;
-                organization: "J-Texon" ;
+                organization: "Acme Corporation" ;
+                assignedOn: "2022-04-25" ;
+            }
+            ListElement {
+                number: "(219) 555-0114" ;
+                createdOn: "2022-04-24" ;
+                voipUser: "User placeholder" ;
+                organization: "Umbrella Corporation" ;
+                assignedOn: "2022-04-25" ;
+            }
+            ListElement {
+                number: "(252) 555-0126" ;
+                createdOn: "2022-04-24" ;
+                voipUser: "User placeholder" ;
+                organization: "Genco Pura Olive Oil Company" ;
+                assignedOn: "2022-04-25" ;
+            }
+            ListElement {
+                number: "(684) 555-0102" ;
+                createdOn: "2022-04-24" ;
+                voipUser: "User placeholder" ;
+                organization: "Sterling Cooper" ;
+                assignedOn: "2022-04-25" ;
+            }
+            ListElement {
+                number: "(229) 555-0109" ;
+                createdOn: "2022-04-24" ;
+                voipUser: "User placeholder" ;
+                organization: "Olivia Pope & Associates" ;
+                assignedOn: "2022-04-25" ;
+            }
+            ListElement {
+                number: "(229) 555-0109" ;
+                createdOn: "2022-04-24" ;
+                voipUser: "User placeholder" ;
+                organization: "Massive Dynamic" ;
                 assignedOn: "2022-04-25" ;
             }
         }
@@ -290,8 +332,8 @@ Item {
                 Text{
                     id: createdonLabelId
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.left: numberLabelId.right
-                    anchors.leftMargin: 100
+                    anchors.left: parent.left
+                    anchors.leftMargin: 284
                     text: createdOn
                     font{
                         family: Constants.mulishNormal.name
@@ -303,8 +345,8 @@ Item {
                 Text{
                     id: voipuserLabelId
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.left: createdonLabelId.right
-                    anchors.leftMargin: 109
+                    anchors.left: parent.left
+                    anchors.leftMargin: 481
                     text: voipUser
                     font{
                         family: Constants.mulishNormal.name
@@ -316,8 +358,8 @@ Item {
                 Text{
                     id: organizationLabelId
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.left: voipuserLabelId.right
-                    anchors.leftMargin: 131
+                    anchors.left: parent.left
+                    anchors.leftMargin: 733
                     text: organization
                     horizontalAlignment: Text.AlignLeft
                     font{
@@ -329,8 +371,8 @@ Item {
                 Text{
                     id: assignedonLabelId
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.left: organizationLabelId.right
-                    anchors.leftMargin: 339
+                    anchors.left: parent.left
+                    anchors.leftMargin: 1109
                     text: assignedOn
                     horizontalAlignment: Text.AlignLeft
                     font{
