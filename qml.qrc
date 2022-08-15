@@ -77,5 +77,6 @@
         <file>VoipEndUser/Dashboard/CardInfo.qml</file>
         <file>VoipEndUser/Dashboard/DashboardPage.qml</file>
         <file>VoipEndUser/Numbers/NumbersPage.qml</file>
+        <file>VoipEndUser/Certificate/CertificatePage.qml</file>
     </qresource>
 </RCC>
