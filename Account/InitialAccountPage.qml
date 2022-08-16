@@ -24,7 +24,7 @@ Item {
                 }
                 onClicked: {
                     console.log("Certificates clicked");
-                    stackview.replace("qrc:/Account/AccountPage.qml");
+                    mainLoader.source = "qrc:/Account/AccountPage.qml";
                 }
             }
 
@@ -52,7 +52,8 @@ Item {
                 }
                 onClicked: {
                     console.log("Order Certificates clicked");
-                    stackview.replace("qrc:/SPCToken/SPCPage.qml");
+                    //stackview.replace("qrc:/SPCToken/SPCPage.qml");
+                    mainLoader.source = "qrc:/SPCToken/SPCPage.qml";
                 }
             }
         }
