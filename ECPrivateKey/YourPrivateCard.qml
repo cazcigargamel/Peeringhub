@@ -10,7 +10,7 @@ Rectangle {
     color: "#FFFFFF"
 
     Text{
-        text: "Your Current Private Key"
+        text: "Your Current Private Key "
         color: Constants.text1Color
 
         anchors {
@@ -26,15 +26,7 @@ Rectangle {
         }
     }
 
-    RowLayout {
-        id: titleId
-        spacing: 50
-        anchors {
-            left: parent.left
-            leftMargin: 50
-            top: parent.top
-            topMargin: 130
-        }
+
         Text{
             text: "Creation Time"
             color: Constants.text1Color
@@ -42,6 +34,12 @@ Rectangle {
             font {
                 family: Constants.mulishNormal.name
                 pixelSize: Constants.h5
+            }
+            anchors {
+                left: parent.left
+                leftMargin: 100
+                top: parent.top
+                topMargin: 119
             }
         }
         Text{
@@ -52,6 +50,12 @@ Rectangle {
                 family: Constants.mulishNormal.name
                 pixelSize: Constants.h5
             }
+            anchors {
+                left: parent.left
+                leftMargin: 314
+                top: parent.top
+                topMargin: 119
+            }
         }
         Text{
             text: "OCN"
@@ -61,8 +65,14 @@ Rectangle {
                 family: Constants.mulishNormal.name
                 pixelSize: Constants.h5
             }
+            anchors {
+                left: parent.left
+                leftMargin: 529
+                top: parent.top
+                topMargin: 119
+            }
         }
-    }
+
 
     ListView {
         id: listViewId
