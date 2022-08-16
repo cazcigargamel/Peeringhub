@@ -89,5 +89,6 @@
         <file>images/import.png</file>
         <file>images/copy.png</file>
         <file>images/specifyRange.png</file>
+        <file>images/delete.png</file>
     </qresource>
 </RCC>

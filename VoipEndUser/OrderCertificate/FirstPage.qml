@@ -251,6 +251,7 @@ Item {
                 anchors.left: parent.left
                 anchors.bottom: bottomLine.top
                 anchors.right: parent.right
+                clip: true
                 model: listmodelId
                 delegate: delegateId
             }
@@ -340,6 +341,144 @@ Item {
                 width: 2
                 color: Constants.outlineColor
             }
+
+            Text {
+                text: qsTr("Selected Numbers")
+                anchors{
+                    left:parent.left
+                    leftMargin: 30
+                    top: parent.top
+                    topMargin: 10
+                }
+                font {
+                    family: Constants.mulishNormal.name
+                    pixelSize: Constants.h3
+                }
+
+                color: Constants.text1Color
+            }
+            Image{
+                source: "qrc:/images/delete.png"
+                anchors{
+                    left:parent.left
+                    leftMargin: 553
+                    top: parent.top
+                    topMargin: 16
+                }
+            }
+            Rectangle{
+                id: upperRightLine
+                width: 561 ; height: 2
+                color: Constants.outlineColor
+                anchors{
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 47
+                }
+            }
+            Rectangle{
+                id: bottomRightLine
+                width: 561 ; height: 2
+                color: Constants.outlineColor
+                anchors{
+                    horizontalCenter: parent.horizontalCenter
+                    top: parent.top
+                    topMargin: 297
+                }
+            }
+            Rectangle{
+                id: leftVerticalLine
+                width: 2 ; height: 212
+                color: Constants.outlineColor
+                anchors{
+                    left: parent.left
+                    leftMargin: 193
+                    top: parent.top
+                    topMargin: 61
+                }
+            }
+            Rectangle{
+                id: rightVerticalLine
+                width: 2 ; height: 212
+                color: Constants.outlineColor
+                anchors{
+                    left: parent.left
+                    leftMargin: 376
+                    top: parent.top
+                    topMargin: 61
+                }
+            }
+            GridView{
+                id: selectedlistViewId
+                anchors.top: upperLine.bottom
+                anchors.left: parent.left
+                anchors.bottom: bottomLine.top
+                anchors.right: leftVerticalLine.left
+                clip: true
+                model: selectedNumbersListmodelId
+                delegate: certificatedelegateId
+            }
+            ListModel{
+                id: selectedNumbersListmodelId
+                ListElement {
+                    phone: "(480) 555-0103" ;
+                    check: "true";
+                }
+                ListElement {
+                    idd: "2" ;
+                    phone: "(603) 555-0123" ;
+                    check: "false" ;
+                }
+                ListElement {
+                    idd: "3" ;
+                    phone: "(239) 555-0108" ;
+                    check: "false" ;
+                }
+                ListElement {
+                    idd: "4" ;
+                    phone: "(208) 555-0112" ;
+                    check: "false" ;
+                }
+                ListElement {
+                    idd: "5" ;
+                    phone: "(219) 555-0114" ;
+                    check: "true";
+                }
+            }
+            Component{
+                id: certificatedelegateId
+                Rectangle {
+                    id: rectId
+                    width: parent.width / 3
+                    anchors.left: parent.left
+                    anchors.leftMargin: 1
+                    height: 57
+                    CheckBox{
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.left: parent.left
+                        anchors.leftMargin: 10
+                        checked: {
+                            if(check === "true") return true;
+                            else return false;
+                        }
+
+                    }
+
+                    Text{
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.left: parent.left
+                        anchors.leftMargin: 104
+                        text: phone
+                        font{
+                            family: Constants.mulishNormal.name
+                            pixelSize: Constants.h5
+                        }
+                        color: Constants.text2Color
+                    }
+
+            }
+        }
+
         }
 
 }
