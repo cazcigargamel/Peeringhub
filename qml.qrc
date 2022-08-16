@@ -90,5 +90,6 @@
         <file>images/copy.png</file>
         <file>images/specifyRange.png</file>
         <file>images/delete.png</file>
+        <file>VoipEndUser/OrderCertificate/SecondPage.qml</file>
     </qresource>
 </RCC>
