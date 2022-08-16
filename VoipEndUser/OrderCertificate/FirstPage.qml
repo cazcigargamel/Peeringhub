@@ -6,6 +6,8 @@ import "../../UIComponents/" as UI
 Item {
     anchors.fill: parent
 
+    signal generateClicked();
+
     Rectangle{
         anchors{
             top: parent.top
@@ -140,9 +142,9 @@ Item {
             }
 
             onClicked: { //stackview.push("qrc:/Account/AccountPage.qml");
-                settings.firstTime = false;
-                console.log("first time false cekildi")
-                loginClicked();
+                stackviewOrderCertificateId.push("qrc:/VoipEndUser/OrderCertificate/SecondPage.qml");
+
+                console.log("generate button is clicked");
             }
         }
 
@@ -408,16 +410,16 @@ Item {
                     topMargin: 61
                 }
             }
-            GridView{
-                id: selectedlistViewId
-                anchors.top: upperLine.bottom
-                anchors.left: parent.left
-                anchors.bottom: bottomLine.top
-                anchors.right: leftVerticalLine.left
-                clip: true
-                model: selectedNumbersListmodelId
-                delegate: certificatedelegateId
-            }
+//            GridView{
+//                id: selectedlistViewId
+//                anchors.top: upperLine.bottom
+//                anchors.left: parent.left
+//                anchors.bottom: bottomLine.top
+//                anchors.right: leftVerticalLine.left
+//                clip: true
+//                model: selectedNumbersListmodelId
+//                delegate: certificatedelegateId
+//            }
             ListModel{
                 id: selectedNumbersListmodelId
                 ListElement {
