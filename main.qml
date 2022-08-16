@@ -11,7 +11,7 @@ import Qt.labs.settings 1.1
 Window {
     id: root
     width: 1600
-    height: 900
+    height: 1025
     visible: true
     title: qsTr("Hello World")
     color: "#F5F5F5"

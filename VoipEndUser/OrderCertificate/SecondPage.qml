@@ -218,7 +218,7 @@ Item {
                 width: 219 ; height: 57
                 border{
                     width: 2
-                    color: Constants.inputHintColor
+                    color: Constants.outlineColor
                 }
             }
         }
@@ -264,7 +264,7 @@ Item {
                 width: 219 ; height: 57
                 border{
                     width: 2
-                    color: Constants.inputHintColor
+                    color: Constants.outlineColor
                 }
             }
         }
@@ -310,10 +310,204 @@ Item {
                 width: 219 ; height: 57
                 border{
                     width: 2
-                    color: Constants.inputHintColor
+                    color: Constants.outlineColor
                 }
             }
         }
+        Rectangle{
+            height: 406 ; width: 2
+            color: Constants.outlineColor
+            anchors{
+                left:parent.left
+                leftMargin: 533
+                top: parent.top
+                topMargin: 50
+            }
+        }
+        Text {
+            text: qsTr("Certificate type:")
+            anchors{
+                left:parent.left
+                leftMargin: 558
+                top: parent.top
+                topMargin: 50
+            }
+            font {
+                family: Constants.mulishNormal.name
+                pixelSize: Constants.h3
+            }
+
+            color: Constants.text2Color
+        }
+        Text {
+            text: qsTr("Parameters:")
+            anchors{
+                left:parent.left
+                leftMargin: 827
+                top: parent.top
+                topMargin: 50
+            }
+            font {
+                family: Constants.mulishNormal.name
+                pixelSize: Constants.h3
+            }
+
+            color: Constants.text2Color
+        }
+        Text {
+            text: qsTr("CA (can issue End-Entities)")
+            anchors{
+                left:parent.left
+                leftMargin: 558
+                top: parent.top
+                topMargin: 107
+            }
+            font {
+                family: Constants.mulishNormal.name
+                pixelSize: Constants.h5
+            }
+
+            color: Constants.text1Color
+        }
+        Text {
+            text: qsTr("Expiration time")
+            anchors{
+                left:parent.left
+                leftMargin: 827
+                top: parent.top
+                topMargin: 107
+            }
+            font {
+                family: Constants.mulishNormal.name
+                pixelSize: Constants.h5
+            }
+
+            color: Constants.text1Color
+        }
+        Text {
+            text: qsTr("Value:")
+            anchors{
+                left:parent.left
+                leftMargin: 1030
+                top: parent.top
+                topMargin: 107
+            }
+            font {
+                family: Constants.mulishNormal.name
+                pixelSize: Constants.h5
+            }
+
+            color: Constants.text2Color
+        }
+        Text {
+            text: qsTr("1 year")
+            anchors{
+                left:parent.left
+                leftMargin: 1087
+                top: parent.top
+                topMargin: 107
+            }
+            font {
+                family: Constants.mulishNormal.name
+                pixelSize: Constants.h5
+            }
+
+            color: Constants.text1Color
+        }
+        Rectangle{
+            width: 2 ; height: 406
+            color: Constants.outlineColor
+            anchors{
+                left:parent.left
+                leftMargin: 533 + 269
+                top: parent.top
+                topMargin: 50
+            }
+        }
+        Text {
+            text: qsTr("Desired update interval")
+            anchors{
+                left:parent.left
+                leftMargin: 827
+                top: parent.top
+                topMargin: 223
+            }
+            font {
+                family: Constants.mulishNormal.name
+                pixelSize: Constants.h5
+            }
+
+            color: Constants.text1Color
+        }
+        Text {
+            text: qsTr("Value:")
+            anchors{
+                left:parent.left
+                leftMargin: 1040
+                top: parent.top
+                topMargin: 223
+            }
+            font {
+                family: Constants.mulishNormal.name
+                pixelSize: Constants.h5
+            }
+
+            color: Constants.text2Color
+        }
+        Text {
+            text: qsTr("1 day")
+            anchors{
+                left:parent.left
+                leftMargin: 1092
+                top: parent.top
+                topMargin: 223
+            }
+            font {
+                family: Constants.mulishNormal.name
+                pixelSize: Constants.h5
+            }
+
+            color: Constants.text1Color
+        }
+        Rectangle{
+            anchors{
+                left:parent.left
+                leftMargin: 948
+                top: parent.top
+                topMargin: 506
+            }
+            color: Constants.primaryColor
+            width: 184 ; height: 50
+            radius: 8
+            Text{
+                text: qsTr("Next")
+                anchors{
+                    left:parent.left
+                    leftMargin: 58
+                    verticalCenter: parent.verticalCenter
+                }
+                font {
+                    family: Constants.mulishNormal.name
+                    pixelSize: Constants.h4
+                }
+
+                color: "#FFFFFF"
+            }
+            Image{
+                source: "qrc:/images/rightArrow.png"
+                anchors{
+                    left:parent.left
+                    leftMargin: 105
+                    verticalCenter: parent.verticalCenter
+                }
+            }
+            MouseArea{
+                anchors.fill: parent
+                onClicked: stackviewOrderCertificateId.push("qrc:/VoipEndUser/OrderCertificate/ThirdPage.qml");
+            }
+        }
+
+
     }
 }
 
