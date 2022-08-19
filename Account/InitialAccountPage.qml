@@ -16,6 +16,7 @@ Item {
                 top: parent.top
                 topMargin: 70
             }
+
             Button {
                 text: "Certificates"
                 font {
@@ -26,6 +27,10 @@ Item {
                     console.log("Certificates clicked");
                     mainLoader.source = "qrc:/Account/AccountPage.qml";
                 }
+                background: Rectangle{
+                    color: "transparent"
+                }
+
             }
 
             Button {
