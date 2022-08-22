@@ -66,7 +66,7 @@ Window {
         }
 
         onSPCTokenClicked: {
-            console.log("spc token clicked");
+            console.log("spc token clicked  ");
             mainLoader.source = "qrc:/SPCToken/SPCPage.qml";
         }
 
